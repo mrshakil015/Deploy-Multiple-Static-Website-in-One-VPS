@@ -14,24 +14,20 @@ Go to your domain provider account. At first you need to point your domain /subd
 
 ## ✅ Step 2: Login Into VPS:
 
-```json
-ssh root@your-vps-ip
-```
-
 ```cmd
 ssh root@your-vps-ip
 ```
 
 ## ✅ Step 3: Install Nginx or Apache
 
-```json
+```cmd
 sudo apt update
 sudo apt install nginx -y
 ```
 
 ## ✅ Step 3: Install Nginx or Apache
 
-```json
+```cmd
 sudo apt update
 sudo apt install nginx -y
 ```
@@ -40,13 +36,13 @@ sudo apt install nginx -y
 
 ### 🔹 To add SSL install Certbot
 
-```json
+```cmd
 apt install certbot python3-certbot-nginx -y
 ```
 
 ### 🔹 Then generate SSL for all domain or subdomain
 
-```json
+```cmd
 certbot --nginx -d your_domain_name
 ```
 
@@ -56,7 +52,7 @@ certbot --nginx -d your_domain_name
 
 ### 🔹 Step-1 : Create directories on VPS:
 
-```json
+```cmd
 mkdir -p /var/www/your_domain_name
 chown -R $USER:$USER /var/www/your_domain_name
 ```
@@ -67,7 +63,7 @@ chown -R $USER:$USER /var/www/your_domain_name
 
 Open New CMD then, using `cd` go to the the root directory, where your project folder are stored. Then  run this command:
 
-```json
+```cmd
 scp -r your_folder_name/* root@your_vps_ip:/var/www/your_domain_name/
 ```
 
@@ -75,11 +71,11 @@ scp -r your_folder_name/* root@your_vps_ip:/var/www/your_domain_name/
 
 ### 🔹 Step-3 : Configure Nginx server blocks
 
-```json
+```cmd
 sudo vim /etc/nginx/sites-available/your_domain_name
 ```
 
-```json
+```cmd
 # Redirect HTTP to HTTPS
 server {
     listen 80;
@@ -126,7 +122,7 @@ server {
 
 ### 🔹 Step-4 : Set Permissions
 
-```json
+```cmd
 sudo chown -R www-data:www-data /var/www/your_domain_or_folder_name
 ```
 
