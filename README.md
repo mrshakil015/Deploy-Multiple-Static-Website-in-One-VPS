@@ -18,6 +18,10 @@ Go to your domain provider account. At first you need to point your domain /subd
 ssh root@your-vps-ip
 ```
 
+```cmd
+ssh root@your-vps-ip
+```
+
 ## ✅ Step 3: Install Nginx or Apache
 
 ```json
