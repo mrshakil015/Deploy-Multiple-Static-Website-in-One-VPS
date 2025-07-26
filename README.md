@@ -18,14 +18,7 @@ Go to your domain provider account. At first you need to point your domain /subd
 ssh root@your-vps-ip
 ```
 
-## ✅ Step 3: Install Nginx or Apache
-
-```cmd
-sudo apt update
-sudo apt install nginx -y
-```
-
-## ✅ Step 3: Install Nginx or Apache
+## ✅ Step 3: Install Nginx
 
 ```cmd
 sudo apt update
